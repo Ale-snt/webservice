@@ -1,0 +1,118 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* ---- HEADER ---- */
+.header {
+    background: #8B0000;
+    color: white;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.header h1 { font-size: 1.3rem; }
+.header nav { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.header nav a { color: white; text-decoration: none; font-size: 0.95rem; }
+.header nav a:hover { text-decoration: underline; }
+.header nav span { color: #ffd; font-size: 0.9rem; }
+
+/* ---- CONTAINER ---- */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ---- PRODOTTI ---- */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+.product {
+    background: white;
+    border-radius: 6px;
+    padding: 18px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+.product h3 { margin-bottom: 8px; font-size: 1rem; }
+.price { color: #27ae60; font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; }
+
+/* ---- PULSANTI ---- */
+.btn {
+    background: #8B0000;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+.btn:hover { background: #a00000; }
+.btn-green { background: #27ae60; }
+.btn-green:hover { background: #219a52; }
+.btn-blue { background: #2980b9; }
+.btn-blue:hover { background: #236fa0; }
+.btn-red { background: #c0392b; }
+.btn-red:hover { background: #a93226; }
+.btn-sm { padding: 5px 10px; font-size: 0.82rem; }
+
+/* ---- FORM ---- */
+.form-box {
+    background: white;
+    padding: 28px;
+    border-radius: 6px;
+    max-width: 460px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+.form-box h2 { margin-bottom: 18px; color: #8B0000; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; margin-bottom: 4px; font-size: 0.9rem; font-weight: bold; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+.form-group textarea { resize: vertical; min-height: 70px; }
+
+/* ---- ALERTS ---- */
+.error   { background: #f8d7da; color: #721c24; padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; }
+.success { background: #d4edda; color: #155724; padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; }
+
+/* ---- TABELLA ---- */
+table { width: 100%; background: white; border-collapse: collapse; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+th { background: #8B0000; color: white; padding: 11px 12px; text-align: left; font-size: 0.9rem; }
+td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+tr:last-child td { border-bottom: none; }
+
+/* ---- STATI ---- */
+.stato-in_attesa      { color: #e67e22; font-weight: bold; }
+.stato-in_lavorazione { color: #2980b9; font-weight: bold; }
+.stato-pronto         { color: #27ae60; font-weight: bold; }
+.stato-consegnato     { color: #888; }
+
+/* ---- SEZIONI ---- */
+h2 { color: #8B0000; margin-bottom: 10px; }
+h3 { margin: 22px 0 10px; color: #555; }
+p  { margin-bottom: 10px; }
+
+@media (max-width: 600px) {
+    .products-grid { justify-content: center; }
+    .header { flex-direction: column; text-align: center; }
+}
